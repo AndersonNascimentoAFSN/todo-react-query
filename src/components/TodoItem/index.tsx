@@ -1,20 +1,27 @@
 import { Task } from "../../@types/task";
+import { useRemoveTodo } from "../../hooks/useRemoveTodo";
 
 type TodoItemProps = {
   item: Task
-  // handleDeleteTodo: (id: string) => void
 }
 
-export function TodoItem({ item, /* handleDeleteTodo */ }: TodoItemProps) {
+export function TodoItem({ item }: TodoItemProps) {
+  const { mutateAsync: removeTodo } = useRemoveTodo()
+
+  function handleRemove() {
+    if (item?.id) {
+      removeTodo({ id: item?.id })
+    }
+  }
 
   return (
     <>
       <tr>
-        <td className="text-center">{item.id}</td>
+        <td className="text-center">{item?.id}</td>
         <td className="text-center">{item.description}</td>
         <td className="text-center">
           <button
-            // onClick={() => handleDeleteTodo(item.id)}
+            onClick={handleRemove}
             className="p-2 bg-purple-700 rounded-lg text-white hover:opacity-75">
             Delete
           </button>

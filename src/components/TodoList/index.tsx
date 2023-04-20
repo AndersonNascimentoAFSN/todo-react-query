@@ -18,7 +18,7 @@ export function TodoList() {
         </thead>
         <tbody>
           {todos?.map((item) => (
-            <TodoItem item={item} /* handleDeleteTodo={handleDeleteTodo} */ key={item.id} />
+            <TodoItem item={item} key={item.id} />
           ))}
         </tbody>
       </table>

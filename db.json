@@ -1,20 +1,16 @@
 {
   "todo": [
     {
-      "id": "zs0ndhX",
-      "description": "TypeScript"
+      "description": "Python",
+      "id": "ga1khmR"
     },
     {
-      "id": "ys0ndhX",
-      "description": "JavaScript"
+      "description": "JavaScript",
+      "id": "ZhRzBZU"
     },
     {
-      "id": "zssndhX",
-      "description": "Java"
-    },
-    {
-      "description": "Golang",
-      "id": "u4hbBVc"
+      "description": "TypeScript",
+      "id": "Siz4f2D"
     }
   ]
 }
